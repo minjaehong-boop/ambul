@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ### 환경 변수
 
-NVIDIA 프레임워크의 `configuration_wizard` 가 `APP_` 프리픽스 환경변수를 YAML 설정으로 매핑합니다 (v2/v3 와 달리 키 사이에 `_` 가 없는 평탄한 이름 규약).
+NVIDIA 프레임워크의 `configuration_wizard` 가 `APP_` 프리픽스 환경변수를 YAML 설정으로 매핑합니다 (v2 와 달리 키 사이에 `_` 가 없는 평탄한 이름 규약).
 
 | 변수 | 기본값 | 설명 |
 |---|---|---|
@@ -95,7 +95,7 @@ v1/
 
 ## 주의
 
-- v2(PageIndex) / v3(Agent) 와 달리 PDF 아티팩트를 번들하지 않습니다. Milvus 컬렉션이 외부에 미리 구축되어 있어야 합니다.
-- 자체 `playground/` UI 가 없습니다 — UI 가 필요하면 v2/v3 의 playground 를 그대로 가리켜 써도 무방합니다.
+- v2(PageIndex)PDF 아티팩트를 번들하지 않습니다. Milvus 컬렉션이 외부에 미리 구축되어 있어야 합니다.
+- 자체 `playground/` UI 가 없습니다 — UI 가 필요하면 v2 의 playground 를 그대로 가리켜 써도 무방합니다.
 - `ingest_docs()` 는 NVIDIA 프레임워크 BaseExample 규약에 따라 구현되어 있으나, 업스트림 컬렉션 스키마에 의존하므로 운영 환경에 맞춰 별도 점검이 필요합니다.
-- `APP_*` 환경변수 명명규약이 v2/v3 와 다릅니다 (v1: `APP_LLM_SERVERURL`, v2/v3: `APP_LLM_SERVER_URL`).
+- `APP_*` 환경변수 명명규약이 v2 와 다릅니다 (v1: `APP_LLM_SERVERURL`, v2: `APP_LLM_SERVER_URL`).
