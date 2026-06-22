@@ -1,0 +1,43 @@
+# Triage RAG v1 — NVIDIA GenerativeAIExamples framework slice
+# Python >= 3.10 recommended
+#
+# 업스트림(RAG/src/chain_server/requirements.txt)은 매우 엄격하게 핀된 버전들이라
+# 새 환경에서 설치가 깨지기 쉽습니다. 이 파일은 triage_rag 파이프라인 동작에
+# 필요한 최소 의존성만 정의합니다. 엄격한 재현이 필요하면 아래 한 줄을 사용하세요:
+#
+#   pip install -r RAG/src/chain_server/requirements.txt
+#
+
+# Web framework (framework chain_server/server.py 요구)
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.1
+python-multipart>=0.0.9
+bleach>=6.1.0
+
+# LangChain (chains.py + chain_server/utils.py)
+langchain>=0.1.9
+langchain-core>=0.1.29
+langchain-community>=0.0.20
+langchain-openai>=0.1.0
+langchain-text-splitters>=0.0.1
+
+# Vector store backend (chain_server/utils.py create_vectorstore_langchain)
+pymilvus>=2.4.0
+
+# Embedding/document parsing (chain_server/utils.py get_embedding_model + ingest)
+sentence-transformers>=3.0.0
+unstructured[all-docs]>=0.12.5
+
+# Configuration wizard
+dataclass-wizard>=0.22.0
+
+# HTTP calls (chains.py _rerank via vLLM /rerank)
+requests>=2.31.0
+
+# YAML prompt files
+pyyaml>=6.0
+
+# OpenTelemetry — optional (tracing.py import path); 아래는 기본값 no-op 동작용
+# opentelemetry-sdk>=1.23.0
+# opentelemetry-api>=1.23.0
+# opentelemetry-exporter-otlp-proto-grpc>=1.23.0

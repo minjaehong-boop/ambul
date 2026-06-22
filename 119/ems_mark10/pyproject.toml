@@ -1,0 +1,24 @@
+[project]
+name = "ems-commander"
+version = "0.1.0"
+description = "AI EMS Commander (mark10) — prototype 의 LLM 기반 pre-KTAS 를 모듈 패키지로 박스화"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "openai>=1.0.0",
+    "uvicorn>=0.30.0",
+    "python-dotenv>=1.0.0",
+    "anyio>=4.0.0",
+]
+
+[project.scripts]
+ems-server = "ems_commander.server:main"
+ems-cli = "ems_commander.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ems_commander"]

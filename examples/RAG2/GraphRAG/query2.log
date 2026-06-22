@@ -1,0 +1,59 @@
+alswoghd@MJH:/e/jh/언어모델/llm/test/RAG2$ uv run step8_compare_naive_vs_graph.py 
+================================================================================
+QUESTION: Encoder stack과 Decoder stack의 하위 구성요소를 모두 비교하고, 두 stack에 공통으로 들어간 구성요소와 한쪽에만 들어간 구성요소를 구분해줘.
+================================================================================
+
+################################################################################
+# NAIVE RAG (VectorRetriever - 청크 텍스트만)
+################################################################################
+Encoder stack과 Decoder stack의 하위 구성요소를 모두 비교해보면,
+
+1. 공통으로 들어간 구성요소  
+   - Multi-Head Self-Attention  
+   - Position-wise Feed-Forward Network (FFN)  
+   - Add & Norm (Residual connection + Layer normalization)  
+
+2. Encoder에만 들어가는 구성요소  
+   - (별도의 추가 모듈 없음)  
+   ※ Encoder는 위 공통 요소들만으로 이루어져 있습니다.
+
+3. Decoder에만 들어가는 구성요소  
+   - Masked Multi-Head Self-Attention (미래 토큰을 볼 수 없도록 마스킹된 Self-Attention)  
+   - Multi-Head Cross-Attention (Encoder 출력을 참조하는 Encoder-Decoder Attention)
+
+요약  
+공통 요소: Multi-Head Self-Attention, Position-wise FFN, Add & Norm  
+Encoder 전용: 없음  
+Decoder 전용: Masked Self-Attention, Cross-Attention
+
+################################################################################
+# GRAPH RAG (VectorCypherRetriever - 청크 + 엔티티/관계)
+################################################################################
+Received notification from DBMS server: <GqlStatusObject gql_status='01N01', status_description="warn: feature deprecated with replacement. apoc.text.join is deprecated. It is replaced by Cypher's `string.join` function..", position=<SummaryInputPosition line=11, column=23, offset=539>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 539, 'line': 11, 'column': 23}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (node:`Chunk`) SEARCH node IN (VECTOR INDEX `chunk_embedding_index` FOR $query_vector LIMIT $top_k * $effective_search_ratio) SCORE AS score WITH node, score ORDER BY score DESC LIMIT $top_k \nWITH node AS chunk, score\nOPTIONAL MATCH (chunk)<-[:FROM_CHUNK]-(e)\nOPTIONAL MATCH (e)-[r]->(e2)\nWHERE NOT e2:Chunk AND NOT e2:Document\nWITH chunk, score,\n     collect(DISTINCT e.name) AS entities,\n     collect(DISTINCT e.name + ' -[' + type(r) + ']-> ' + e2.name) AS relations\nRETURN chunk.text AS text,\n       score,\n       'ENTITIES: ' + apoc.text.join(entities, ', ') +\n       '\\nRELATIONS: ' + apoc.text.join(relations, '; ') AS graph_context\n"
+Received notification from DBMS server: <GqlStatusObject gql_status='01N01', status_description="warn: feature deprecated with replacement. apoc.text.join is deprecated. It is replaced by Cypher's `string.join` function..", position=<SummaryInputPosition line=12, column=26, offset=597>, raw_classification='DEPRECATION', classification=<NotificationClassification.DEPRECATION: 'DEPRECATION'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'_classification': 'DEPRECATION', '_severity': 'WARNING', '_position': {'offset': 597, 'line': 12, 'column': 26}, 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: "MATCH (node:`Chunk`) SEARCH node IN (VECTOR INDEX `chunk_embedding_index` FOR $query_vector LIMIT $top_k * $effective_search_ratio) SCORE AS score WITH node, score ORDER BY score DESC LIMIT $top_k \nWITH node AS chunk, score\nOPTIONAL MATCH (chunk)<-[:FROM_CHUNK]-(e)\nOPTIONAL MATCH (e)-[r]->(e2)\nWHERE NOT e2:Chunk AND NOT e2:Document\nWITH chunk, score,\n     collect(DISTINCT e.name) AS entities,\n     collect(DISTINCT e.name + ' -[' + type(r) + ']-> ' + e2.name) AS relations\nRETURN chunk.text AS text,\n       score,\n       'ENTITIES: ' + apoc.text.join(entities, ', ') +\n       '\\nRELATIONS: ' + apoc.text.join(relations, '; ') AS graph_context\n"
+Encoder stack과 Decoder stack의 하위 구성요소를 비교하면 다음과 같습니다.
+
+1. **공통으로 들어간 구성요소**  
+   - **Multi-Head Self-Attention**  
+     - Encoder: Encoder layer마다 존재  
+     - Decoder: Decoder layer마다 존재 (Masked Multi-Head Self-Attention으로 동작)
+
+   - **Position-wise Feed-Forward Network (FFN)**  
+     - Encoder: 각 Encoder layer 내에 존재  
+     - Decoder: 각 Decoder layer 내에 존재
+
+   - **Residual Connection + Layer Normalization**  
+     - Encoder: Self-Attention → Add & Norm, FFN → Add & Norm  
+     - Decoder: Masked Self-Attention → Add & Norm, Cross-Attention → Add & Norm, FFN → Add & Norm
+
+2. **한쪽에만 들어간 구성요소**  
+   - **Encoder에만 존재**  
+     (없음. 위의 공통 요소들 외에 Encoder에만 존재하는 별도의 하위 구성요소는 없음)
+
+   - **Decoder에만 존재**  
+     - **Masked Multi-Head Self-Attention**  
+       - 미래 시점 정보가 보이지 않도록 마스킹된 Self-Attention (공통 요소로 분류되나, Encoder와 달리 마스킹이 적용되는 점에서 Decoder에만 존재하는 특징으로 볼 수 있음)  
+     - **Multi-Head Cross-Attention (Encoder-Decoder Attention)**  
+       - Encoder 출력을 Query, Key, Value로 사용하여 Decoder가 Encoder 정보를 참조하는 레이어
+
+요약하면, **공통 구성요소**는 Multi-Head Self-Attention, Position-wise FFN, Residual Connection + Layer Normalization이며, **Decoder에만 추가로 존재**하는 구성요소는 Masked Multi-Head Self-Attention과 Multi-Head Cross-Attention입니다.

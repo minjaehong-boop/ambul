@@ -1,0 +1,2 @@
+{"ts": "2026-06-02T15:45:00.609785", "type": "user", "content": "임산부가 배가 엄청 아파", "meta": {}}
+{"ts": "2026-06-02T15:45:00.693368", "type": "error", "content": "Extraction failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}

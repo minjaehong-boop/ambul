@@ -1,0 +1,8 @@
+{"ts": "2026-06-02T15:46:52.674647", "type": "user", "content": "임산부가 배가 엄청 아파", "meta": {}}
+{"ts": "2026-06-02T15:46:53.017199", "type": "params", "content": "{\"symptom\": \"배가 아파\", \"pregnancy\": true, \"abdominal_pain\": true}", "meta": {}}
+{"ts": "2026-06-02T15:47:05.314894", "type": "user", "content": "응급분만", "meta": {}}
+{"ts": "2026-06-02T15:47:06.256799", "type": "params", "content": "{\"symptom\": \"응급분만\", \"signs\": []}", "meta": {}}
+{"ts": "2026-06-02T15:48:40.547536", "type": "user", "content": "뱀에 물림", "meta": {}}
+{"ts": "2026-06-02T15:48:40.688473", "type": "params", "content": "{\"symptom\": \"뱀에 물림\", \"signs\": []}", "meta": {}}
+{"ts": "2026-06-02T15:49:22.115611", "type": "user", "content": "눈에 흙이들어감", "meta": {}}
+{"ts": "2026-06-02T15:49:22.292147", "type": "params", "content": "{\"symptom\": \"눈에 흙이들어감\"}", "meta": {}}

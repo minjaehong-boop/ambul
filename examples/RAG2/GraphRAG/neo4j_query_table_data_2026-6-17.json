@@ -1,0 +1,117 @@
+[
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "중증 호흡곤란"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "쇼크"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "무의식 (U, GCS 3-8)"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "중등도 호흡곤란"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "혈역학적 장애"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "의식변화 (V/P, GCS 9-13)"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "열, 면역저하 상태"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "패혈증 의증 (3 개 이상의 SIRS 기준 만족)"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "경증 호흡곤란"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "비정상 맥박수지만 혈역학적으로 안정"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "전신염증반응증후군 (열을 포함한 2 개의 SIRS 기준 만족)"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "열 (아파 보임)"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "열 (건강해 보임)"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "중증 탈수"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "중등도 탈수"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "갑자기 보행이 어려움"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "탈수의 가능성 있음"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "만성 쇠약"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "활력징후, 중증 탈수"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "활력징후, 중등도 탈수"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "활력징후, 갑자기 보행이 어려움"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "활력징후, 탈수의 가능성 있음"
+  },
+  {
+    "a.name": "전신 쇠약",
+    "type(r)": "HAS_SYMPTOM",
+    "b.name": "활력징후, 만성 쇠약"
+  }
+]

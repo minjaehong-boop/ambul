@@ -1,0 +1,14 @@
+{"ts": "2026-06-02T15:05:14.182915", "type": "user", "content": "hi", "meta": {}}
+{"ts": "2026-06-02T15:05:14.375874", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}
+{"ts": "2026-06-02T15:05:18.919295", "type": "user", "content": "머리가 아포", "meta": {}}
+{"ts": "2026-06-02T15:05:18.922082", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}
+{"ts": "2026-06-02T15:05:20.647324", "type": "user", "content": "머리 아파", "meta": {}}
+{"ts": "2026-06-02T15:05:20.649589", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}
+{"ts": "2026-06-02T15:05:21.671378", "type": "user", "content": "두통", "meta": {}}
+{"ts": "2026-06-02T15:05:21.673418", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}
+{"ts": "2026-06-02T15:05:22.647405", "type": "user", "content": "치통", "meta": {}}
+{"ts": "2026-06-02T15:05:22.649713", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}
+{"ts": "2026-06-02T15:05:24.383347", "type": "user", "content": "배아파", "meta": {}}
+{"ts": "2026-06-02T15:05:24.385656", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}
+{"ts": "2026-06-02T15:05:25.807244", "type": "user", "content": "응급", "meta": {}}
+{"ts": "2026-06-02T15:05:25.809322", "type": "error", "content": "Planning failed: Error code: 404 - {'object': 'error', 'message': 'The model `LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ` does not exist.', 'type': 'NotFoundError', 'param': None, 'code': 404}", "meta": {}}

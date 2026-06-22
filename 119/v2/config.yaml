@@ -1,0 +1,13 @@
+# Triage RAG 설정 파일
+# 환경변수로도 동일하게 설정 가능:
+#   APP_LLM_SERVER_URL=http://localhost:8000/v1
+#   APP_LLM_MODEL_NAME=Qwen/Qwen3-8B
+
+llm:
+  serverUrl: "http://localhost:8002/v1"   # vLLM 또는 OpenAI 호환 서버 URL
+  #modelName: "Eslzzyl/Qwen3-4B-Instruct-2507-AWQ"             # 서빙 중인 모델명
+  modelName: "cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit"   
+  #Corrective llm활용한 피드백루프 생성
+ # 최종 답변 합성 전 cove용 llm
+  
+  

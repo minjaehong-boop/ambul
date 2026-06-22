@@ -1,0 +1,4 @@
+{"ts": "2026-06-02T15:15:08.722217", "type": "user", "content": "응급분만", "meta": {}}
+{"ts": "2026-06-02T15:15:09.161567", "type": "plan", "content": "{'suspect': '응급분만', 'knowledge_query': '응급분만의 원인, 증상, 진단 기준, 즉각적인 대처 프로토콜은 무엇인가?', 'hospital_dept': '산부인과'}", "meta": {}}
+{"ts": "2026-06-02T15:38:07.696477", "type": "user", "content": "임산부가 배가 엄청 아파", "meta": {}}
+{"ts": "2026-06-02T15:38:08.139796", "type": "plan", "content": "{'suspect': '임산부 배통', 'knowledge_query': '임산부 배통의 주요 원인과 증상, 즉각적인 위험 요소 및 대처 프로토콜은 무엇인가?', 'hospital_dept': '산부인과'}", "meta": {}}

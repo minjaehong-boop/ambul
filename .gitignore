@@ -1,0 +1,29 @@
+# --- Secrets ---
+openrouter_key.txt
+key.txt
+*.env
+.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# --- uv ---
+# uv.lock is kept on purpose for reproducible 119 builds
+
+# --- Vector / graph stores & caches ---
+db/
+chromadb/
+*.sqlite3
+
+# --- OCR / large artifacts (not committed) ---
+examples/ocr/
+*.AppImage
+output/
+
+# --- OS ---
+.DS_Store
+Thumbs.db

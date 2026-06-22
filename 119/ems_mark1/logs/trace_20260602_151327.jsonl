@@ -1,0 +1,8 @@
+{"ts": "2026-06-02T15:13:29.705696", "type": "user", "content": "안녕", "meta": {}}
+{"ts": "2026-06-02T15:13:30.584414", "type": "plan", "content": "{'suspect': '심장마비', 'knowledge_query': '심장마비의 주요 증상, 진단 기준, 즉각적인 대처 프로토콜은 무엇인가?', 'hospital_dept': '심장내과'}", "meta": {}}
+{"ts": "2026-06-02T15:13:56.601770", "type": "user", "content": "나 머리가 너무 아파", "meta": {}}
+{"ts": "2026-06-02T15:13:56.831116", "type": "plan", "content": "{'suspect': '두통', 'knowledge_query': '두통의 주요 원인과 진단 프로토콜은 무엇인가?', 'hospital_dept': '신경과'}", "meta": {}}
+{"ts": "2026-06-02T15:14:17.201755", "type": "user", "content": "임산부인데 배가 아파", "meta": {}}
+{"ts": "2026-06-02T15:14:17.590505", "type": "plan", "content": "{'suspect': '임산부 배통', 'knowledge_query': '임산부 배통의 주요 원인과 증상, 즉각적인 위험 요소 및 대처 프로토콜은 무엇인가?', 'hospital_dept': '산부인과'}", "meta": {}}
+{"ts": "2026-06-02T15:14:22.450094", "type": "user", "content": "응급 분만", "meta": {}}
+{"ts": "2026-06-02T15:14:22.756994", "type": "plan", "content": "{'suspect': '분만', 'knowledge_query': '분만 시의 주요 증상, 진단 기준, 즉각적인 대처 프로토콜은 무엇인가?', 'hospital_dept': '산부인과'}", "meta": {}}
